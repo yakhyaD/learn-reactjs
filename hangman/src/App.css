@@ -1,0 +1,113 @@
+.Hangman {
+  display: block;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.header {
+  text-align: center;
+}
+.keyboard {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  width: 80%;
+}
+.keyboard .letter {
+  font-size: 25px;
+  margin: 15px 30px;
+  padding: 40px;
+  background-color: #17a2b8;
+}
+/* .letter:hover { */
+  /* cursor: pointer; */
+  /* padding: 10px; */
+  /* background-color: #17a2b9; */
+/* } */
+.guessWord {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin: 10px auto;
+  width: 50%;
+}
+.guessLetter {
+  margin: auto;
+}
+/*
+  .Hangman {
+    text-align: center;
+  }
+
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+  }
+
+  .App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+  }
+
+  .App-title {
+    font-size: 1.5em;
+  }
+
+  .App-intro {
+    font-size: large;
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .hangman {
+    text-align: center;
+  }
+
+  .btn-info {
+    margin-left: 25%;
+  }
+
+  .header {
+    display: flex;
+    margin-top: 1%;
+  }
+
+  .title {
+    margin-left: 40%;
+  }
+
+  @media all and (max-device-width: 480px) {
+    .hangman {
+      flex-direction: column;
+    }
+
+    .header {
+      flex-direction: column;
+      height: 15%;
+    }
+
+    .title {
+      margin-left: 3%;
+    }
+
+    .btn-info {
+      margin: 0 auto;
+      width: 50%;
+      margin-top: 10px;
+    }
+
+  }
+
+*/
