@@ -1,0 +1,748 @@
+/* Global Styles */
+
+:root {
+  --primary-color: #e50914;
+  --dark-color: #141414;
+  --light-color: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.nav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 40px;
+  z-index: 1;
+  background-color: #111;
+  /* Animations */
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.nav__logo {
+  position: fixed;
+  width: 80px;
+  height: 40px;
+  left: 0;
+  object-fit: contain;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.nav__avatar {
+  position: fixed;
+  width: 40px;
+  right: 0;
+  object-fit: contain;
+  padding-left: 20px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.nav__dark {
+  background-color: #111;
+}
+
+.banner {
+  position: relative;
+  height: 440px;
+  min-width: 100%;
+  object-fit: contain;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  margin-top: 35px;
+}
+
+.banner__title {
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 15px;
+}
+
+.banner__button button {
+  padding: 10px 20px;
+  margin-right: 15px;
+  border: 1px #111;
+  transition: all 0.8s;
+  font-weight: bold;
+}
+
+.banner__button button:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.banner__description {
+  width: 45rem;
+  line-height: 1.3;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  max-width: 360px;
+  height: 80px;
+  font-weight: 800;
+}
+
+.row {
+  background-color: #111;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.row h2 {
+  padding-left: 20px;
+}
+
+.row__images {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 10px;
+}
+
+.row__images::-webkit-scrollbar {
+  display: none;
+}
+
+.row__image {
+  max-height: 100px;
+  object-fit: contain;
+  margin-right: 10px;
+  width: 100%;
+  transition: transform 0.8s;
+}
+
+.row__image:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.row__isLargeRow {
+  max-height: 250px;
+}
+.page__contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50%;
+  height: 100%;
+  margin: auto;
+  color: #fff;
+  flex-direction: column;
+}
+
+.page__title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.page__subtitle {
+  font-size: 1.215rem;
+  margin-bottom: 15px;
+}
+
+.page__form h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form__inputs {
+  display: flex;
+}
+
+.form__inputs input {
+  border: none;
+}
+
+.form__inputs input[type="email"] {
+  width: 70%;
+  padding: 15px;
+  font-size: 1.1rem;
+  transition: all 0.5s;
+}
+.form__inputs input[type="email"]:focus {
+  text-align: start;
+  padding-top: 0;
+  border: none;
+}
+
+.form__inputs input[type="submit"] {
+  width: 30%;
+  padding: 18px;
+  font-size: 1.625rem;
+  background-color: #e50914;
+  color: #fff;
+  transition: all 0.25s;
+}
+
+.form__inputs input[type="submit"]:hover {
+  background-color: red;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.section {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  border-bottom: 5px solid gray;
+  padding-bottom: 80px;
+}
+.TV__text {
+  padding-top: 100px;
+  padding-left: 45px;
+  min-width: 40%;
+}
+.TV__text h1 {
+  font-size: 2rem;
+}
+.TV__text h2 {
+  font-size: 1.5rem;
+  padding: 20px 0;
+}
+.TV__animation {
+  display: flex;
+  min-width: 45%;
+  min-height: 450px;
+  padding: 0 28px;
+  /* margin-bottom: 75px; */
+  position: relative;
+  background-color: #f4f4f4;
+  background: url("https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png");
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  object-fit: contain;
+}
+.TV__animation video {
+  width: 100%;
+  object-fit: contain;
+}
+.section2__left {
+  width: 50%;
+}
+.section2__left__img {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  display: flex;
+}
+.section2__left__footer {
+  background-color: #000;
+  width: 55%;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  top: 78%;
+  display: flex;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.section2__left__footer img {
+  height: 80px;
+  margin: 10px;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+.section2__left__footer__text {
+  text-align: start;
+  margin-top: 30px;
+}
+.section2__left__svg img {
+  height: 80px;
+  margin-left: 80px;
+}
+.section2__right_text {
+  padding: 100px;
+  padding-left: 45px;
+  min-width: 40%;
+}
+.section2__right_text h1 {
+  line-height: 1.1;
+  font-size: 3.125rem;
+}
+.section2__right_text h2 {
+  padding-top: 15px;
+  font-size: 27px;
+  font-weight: 500;
+}
+.section3__left {
+  padding-top: 100px;
+  padding-left: 45px;
+  min-width: 40%;
+}
+.section3__left h1 {
+  font-size: 2rem;
+}
+.section3__left h2 {
+  font-size: 1.5rem;
+  padding: 20px 0;
+}
+.section3__right {
+  display: flex;
+  min-width: 40%;
+  min-height: 400px;
+  padding: 0 20px;
+  /* margin-bottom: 75px; */
+  position: relative;
+  background-color: #f4f4f4;
+  background: url("https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png");
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  /* background-position: center center; */
+}
+.section3__right video {
+  width: 350px;
+  object-fit: cover;
+  padding-bottom: 100px;
+  padding-right: 20px;
+}
+.section__ask {
+  padding: 30px;
+  background-color: #000;
+  color: #fff;
+  border-bottom: 5px solid gray;
+}
+.section__center {
+  padding: 20px 0;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+.section__center h1 {
+  font-size: 3.125rem;
+  padding-bottom: 30px;
+}
+.list__items {
+  margin: 15px 0;
+  background-color: #303030;
+  padding: 20px;
+  text-align: left;
+}
+.list__items__head {
+  width: 100%;
+  background-color: #303030;
+  border: none;
+  color: #fff;
+  padding-bottom: 20px;
+  font-size: 27px;
+  font-weight: 800;
+  text-align: left;
+  outline: none;
+  border-bottom: 2px solid #000;
+}
+.list__items__head:hover {
+  cursor: pointer;
+}
+.list__items__details {
+  display: none;
+  padding: 1.2rem;
+  font-size: 27px;
+  transition: ease-in-out 1s;
+}
+.show {
+  display: inline-block;
+}
+.section3__page__form {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 70px;
+}
+.section3__page__form h3 {
+  padding: 20px 0;
+}
+.section3__page__form .form__inputs {
+  width: 80%;
+  margin: 0 auto;
+}
+.section__contact {
+  padding-top: 30px;
+  background-color: #000;
+  font-size: 15px;
+}
+.section__contact a {
+  color: #757575;
+}
+.section__contact a:hover {
+  text-decoration: underline;
+}
+.section__contact__contents {
+  display: block;
+  padding: 30px;
+  width: 50%;
+  margin: 0 15%;
+  color: #757575;
+  text-align: left;
+}
+.section__contact__title {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.section__contact__lists {
+  display: flex;
+  justify-content: space-between;
+}
+.contact__list__items {
+  width: 100%;
+  padding: 10px 10px 10px 0;
+}
+.section__contact__contents h3 {
+  padding: 20px 0;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+/* Login Page */
+
+.login__contents {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  align-items: center;
+  color: #303030;
+  height: 100vh;
+}
+.login__form {
+  margin: 0 auto;
+  /*background-color: #111;*/
+  padding: 40px 20px;
+  border: 1px solid #111;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #303030;
+  width: 50%;
+  height: 500px;
+  margin-top: 50px;
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+.login__form h1 {
+  padding: 20px 0;
+  color: #fff;
+}
+.form__control {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  background-color: #303030;
+  color: #fff;
+  border: none;
+}
+.login__form input[type="submit"] {
+  background-color: red;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+.login__form input[type="checkbox"] {
+  background: #303030;
+}
+
+.login__help {
+  display: flex;
+  justify-content: space-between;
+}
+.login__form a {
+  color: #303030;
+}
+.login__form a:hover {
+  color: #303030;
+  text-decoration: underline;
+}
+.login__footer {
+  padding-top: 50px;
+  background-color: #000;
+}
+.login__footer img {
+  width: 20px;
+  margin-right: 15px;
+}
+.login__fb {
+  margin-bottom: 15px;
+}
+.login__register a {
+  margin: 0 10px 10px 0;
+  color: #fff;
+}
+.login__register a:hover {
+  color: #fff;
+}
+.login__register h3 {
+  font-weight: normal;
+  font-size: 15px;
+}
+.login__register span {
+  color: blue;
+}
+.login__register p {
+  margin: 10px 0;
+}
+.login__bottom {
+  display: flex;
+  padding-top: 30px;
+  border: 1px solid #303030;
+  background-color: #000;
+}
+.login__bottom ul {
+  padding: 20px 0;
+  margin: 0 30px;
+}
+.login__bottom ul a {
+  color: #303030;
+  font-size: 14px;
+}
+.login__bottom ul a:hover {
+  text-decoration: underline;
+}
+.register__page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.register__contents {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  align-items: center;
+  color: #000;
+  height: 100vh;
+  margin: 0 auto;
+}
+.register__head {
+  background: url("https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Devices.png");
+  background-size: contain;
+  width: 40%;
+  height: 65px;
+}
+.register__contents h3 {
+  padding: 30px 0 10px 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+.register__contents h1 {
+  font-weight: 700;
+  font-size: 23px;
+  padding: 20px 0;
+}
+.register__contents p {
+  width: 50%;
+}
+.register__contents a {
+  display: block;
+  margin-top: 20px;
+  color: #fff;
+  text-decoration: none;
+  width: 50%;
+  padding: 15px 40px;
+  background-color: #e50914;
+  text-align: center;
+  border-radius: 3px;
+}
+.register__contact {
+  display: flex;
+  padding: 40px;
+  background-color: #f3f3f3;
+  width: 100%;
+  flex-direction: column;
+  color: #757575;
+}
+.register__contact h3 {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.register__bottom {
+  display: flex;
+}
+.register__bottom ul {
+  margin-right: 20px;
+  min-width: 190px;
+}
+.register__bottom ul a {
+  color: #757575;
+  font-size: 12px;
+}
+.register__bottom ul a:hover {
+  text-decoration: underline;
+}
+
+/*Register form */
+.reg__contents {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  margin: 0 auto;
+  text-align: left;
+  width: 30%;
+  padding-top: 60px;
+}
+
+.reg__contents h2 {
+  width: 100%;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: left;
+}
+.reg__contents h3 {
+  width: 100%;
+  font-weight: 600;
+  font-size: 23px;
+  text-align: left;
+  padding: 10px;
+}
+.reg__form__control {
+  width: 100%;
+  padding: 17px;
+  box-sizing: border-box;
+  margin: 10px 0;
+}
+.reg__contents label {
+  padding-top: 10px;
+  padding-left: 8px;
+}
+.reg__contents input[type="submit"] {
+  padding: 15px;
+  background-color: #e50914;
+  color: #fff;
+  font-size: 19px;
+}
+.reg__contents input[type="submit"]:hover {
+  background-color: red;
+  cursor: pointer;
+}
+.navlog {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+  background-color: #fff;
+  /* Animations */
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+  border-bottom: 5px solid #f3f3f3;
+}
+.navlog__contents {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.navlog__contents a {
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+.navlog__contents a:hover {
+  text-decoration: underline;
+}
+.navlog__logo {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  left: 0;
+  object-fit: contain;
+}
+.error {
+  background-color: #e50914;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+/* Choose Plans Page*/
+/*https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Checkmark.png) no-repeat 50% 50%*/
+.plans__contents {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  margin: 30px auto;
+  text-align: center;
+  width: 30%;
+  padding-top: 100px;
+}
+.plans__logo {
+  background: url("https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Checkmark.png");
+  background-size: contain;
+  width: 12%;
+  height: 50px;
+  margin: 0 auto;
+}
+.plans__contents h2 {
+  width: 100%;
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  padding: 20px 0;
+}
+.plans__contents h3 {
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+}
+.plans__items {
+  width: 100%;
+  padding: 15px;
+  margin-left: 10px;
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
+}
+.plans__items span {
+  margin-left: 10px;
+  font-size: 19px;
+}
+.check__icon {
+  width: 24px;
+  height: 24px;
+  color: #e50914;
+  display: block;
+}
+.plans__contents a {
+  padding: 18px 20px;
+  background-color: #e50914;
+  color: #fff;
+  width: 90%;
+  box-sizing: border-box;
+  margin: 20px 0;
+  font-weight: 700;
+}
